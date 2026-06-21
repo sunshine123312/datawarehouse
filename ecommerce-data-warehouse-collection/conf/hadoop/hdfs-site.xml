@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <!-- NameNode 数据目录 -->
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>file://${hadoop.tmp.dir}/name</value>
+    </property>
+
+    <!-- DataNode 数据目录 -->
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>file://${hadoop.tmp.dir}/data</value>
+    </property>
+
+    <!-- SecondaryNameNode 所在主机 -->
+    <property>
+        <name>dfs.namenode.secondary.http-address</name>
+        <value>hadoop104:9868</value>
+    </property>
+
+    <!-- 副本数 -->
+    <property>
+        <name>dfs.replication</name>
+        <value>3</value>
+    </property>
+
+    <!-- 文件块大小 -->
+    <property>
+        <name>dfs.blocksize</name>
+        <value>134217728</value>
+    </property>
+
+    <!-- 开启 WebHDFS -->
+    <property>
+        <name>dfs.webhdfs.enabled</name>
+        <value>true</value>
+    </property>
+</configuration>
